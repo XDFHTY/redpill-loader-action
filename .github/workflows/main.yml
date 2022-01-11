@@ -26,12 +26,12 @@ jobs:
         run: chmod 0755 ./build-ds918-7.0.1.sh
 
       - name: Build docker image
-        run: ./build-ds918-7.0.1.sh build apollolake-7.0.1-42218
+        run: ./build-ds918-7.0.1.sh build DS918+-7.0.1-42218
 
       - name: Create dsm image
-        run: ./build-ds918-7.0.1.sh auto apollolake-7.0.1-42218
+        run: ./build-ds918-7.0.1.sh auto DS918+-7.0.1-42218
 
       - uses: actions/upload-artifact@v2
         with:
           name: dsm918
-          path: images/redpill-DS[39]*.img
+          path: ./images
