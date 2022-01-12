@@ -30,12 +30,14 @@ jobs:
             docker/downloads/*.txz
           key: ${{matrix.platform}}-${{matrix.version}}-${{ hashFiles('global_config.json') }}
           
+                    
+      - name: 授权执行
+        run: chmod 0755 ./build-ds918-7.0.1.sh
+
+
       - name: 准备构建环境
         run: |
           ./build-ds918-7.0.1.sh build ${{matrix.platform}}-${{matrix.version}}
-          
-      - name: Chmod
-        run: chmod 0755 ./build-ds918-7.0.1.sh
 
       - name: 编译引导镜像
         run: ./build-ds918-7.0.1.sh auto  ${{matrix.platform}}-${{matrix.version}}
