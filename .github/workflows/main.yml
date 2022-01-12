@@ -32,7 +32,7 @@ jobs:
           
       - name: 准备构建环境
         run: |
-          ./redpill_tool_chain.sh build ${{matrix.platform}}-${{matrix.version}}
+          ./build-ds918-7.0.1.sh build ${{matrix.platform}}-${{matrix.version}}
           
       - name: Chmod
         run: chmod 0755 ./build-ds918-7.0.1.sh
