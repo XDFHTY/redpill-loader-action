@@ -27,7 +27,7 @@ cd ..
 # build redpill-load
 cd redpill-load
 cp ${root}/user_config.DS918+.json ./user_config.json
-./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
+# ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
 ./ext-manager.sh add https://github.com/pocopico/rp-ext/blob/main/ixgbe/rpext-index.json
 ./ext-manager.sh add https://github.com/pocopico/rp-ext/blob/main/r8125/rpext-index.json
 ./ext-manager.sh add https://github.com/pocopico/rp-ext/blob/main/mpt3sas/rpext-index.json
