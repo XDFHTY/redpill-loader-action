@@ -47,5 +47,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dsm-${{matrix.platform}}-${{matrix.version}}
-          path: /home/runner/work/redpill-loader-action/redpill-loader-action/ds918-7.0.1/redpill-load/images/redpill-DS*.img
+          path: images/redpill-DS[39]*.img
           if-no-files-found: error
